@@ -1,5 +1,26 @@
 from tkinter import *
 from tkinter import messagebox
+import time
+from datetime import datetime
+
+welcome_message = 'Welcome to your ULTIMATE TO-DO LIST...'
+print (welcome_message)
+name = input('What is your name?')
+print (name)
+print(input('How do you plan to use this app?'))
+
+class User:
+  def __init__(self,name,use):
+    self.name = name
+    self.use = use
+
+user1 = User("Natalie", 'Educational and Personal Use')
+
+print(user1.name)
+print(user1.use)
+
+verification= input('Is this correct? Please type yes or no')
+print(verification)
 
 def newTask():
     task = my_entry.get()
