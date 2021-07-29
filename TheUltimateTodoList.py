@@ -41,7 +41,18 @@ def newTask():
 
 def deleteTask():
     lb.delete(ANCHOR)
-    
+
+def startTimer():
+    start = datetime.now()
+    print("Start of Task=",start)
+
+def endTimer():
+    end = datetime.now()
+    start = datetime.now()
+    time_elapsed = datetime.now() - start
+    print('Time elapsed (hh:mm:ss.ms) {}'.format(time_elapsed))
+    print('Good job on completing a task! You can now click complete task and begin another task!')
+            
 ws = Tk()
 ws.geometry('500x450+500+200')
 ws.title('THE ULTIMATE TO-DO LIST')
@@ -117,6 +128,27 @@ delTask_btn = Button(
 )
 delTask_btn.pack(fill=BOTH, expand=True, side=LEFT)
 
+StartTimer_btn = Button(
+    button_frame,
+    text='Start Time',
+    font=('times 14'),
+    bg='#ff8b61',
+    padx=20,
+    pady=10,
+    command=startTimer
+)
+StartTimer_btn.pack(fill=BOTH, expand=True, side=LEFT)
+
+StopTimer_btn = Button(
+    button_frame,
+    text='End Time',
+    font=('times 14'),
+    bg='#ff8b61',
+    padx=20,
+    pady=10,
+    command=endTimer
+)
+StopTimer_btn.pack(fill=BOTH, expand=True, side=LEFT)
 
 ws.mainloop()
 
