@@ -22,6 +22,15 @@ print(user1.use)
 verification= input('Is this correct? Please type yes or no')
 print(verification)
 
+if 'yes' in verification:
+  verification_answer = "Great...let\'s continue"
+else:
+  verification_answer = "This can be changed later in settings based on your preferences."
+
+print (verification_answer)
+
+print('Thank you for your feedback, let\'s get started!')
+
 def newTask():
     task = my_entry.get()
     if task != "":
